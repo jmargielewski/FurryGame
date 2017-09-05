@@ -1,7 +1,7 @@
 {
   "name": "config",
   "version": "1.0.0",
-  "description": "> Pamiętaj, żeby oddzielać ćwiczenia komentarzami i pisać czytelny, dobrze sformatowany kod.",
+  "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

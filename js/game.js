@@ -6,33 +6,33 @@ function Game(){
   this.furry= new Furry();
   this.coin= new Coin();
   this.score= 0;
-  this.index= function(x,y) {
+  this.index= function(x, y) {
     return x + (y * 10);
   }
   this.showFurry= function(){
-    this.board[ this.index(this.furry.x,this.furry.y) ].classList.add('furry');
+    this.board[ this.index(this.furry.x, this.furry.y) ].classList.add('furry');
   }
   this.showCoin= function(){
-    this.board[ this.index(this.coin.x,this.coin.y) ].classList.add('coin');
+    this.board[ this.index(this.coin.x, this.coin.y) ].classList.add('coin');
   }
   this.startGame= function(){
     var self= this;
-    this.idSetInterval= setInterval(function(){
+    this.idSetInterval = setInterval(function(){
       self.moveFurry();
     }, 250);
   }
   this.moveFurry= function(){
     this.hideVisibleFurry();
-    if(this.furry.direction === "right") {
+    if(this.furry.direction === 'right') {
         this.furry.x= this.furry.x + 1;
         this.gameOver();
-    }else if ( this.furry.direction === "left") {
+    }else if ( this.furry.direction === 'left') {
         this.furry.x= this.furry.x - 1;
         this.gameOver();
-    }else if ( this.furry.direction === "top") {
+    }else if ( this.furry.direction === 'top') {
         this.furry.y= this.furry.y - 1;
         this.gameOver();
-    }else if ( this.furry.direction === "down") {
+    }else if ( this.furry.direction === 'down') {
         this.furry.y= this.furry.y + 1;
         this.gameOver();
     }
